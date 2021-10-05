@@ -32,18 +32,18 @@ data.forEach((ufoSighting) => {
 var submit = d3.select("#filter-btn");
 submit.on("click", function() {
 
-    // Preventing the page from refreshing
+    // Prevent the page from refreshing
     d3.event.preventDefault();
 
-    // clear the table
-    d3.select("tbody").selectAll("*").remove();
+    // remove any children from the list
+    list.html("");
 
     var inputElement = d3.select("#datetime");
 
      // Get the value property of the input element
     var inputValue = inputElement.property("value");
 
-    // matching the input value with data
+    // Match the input value with data
     var filteredData = tableData.filter(data => data.datetime === inputValue);
 
     console.log(filteredData);
