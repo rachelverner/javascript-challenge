@@ -36,7 +36,7 @@ submit.on("click", function() {
     d3.event.preventDefault();
 
     // remove any children from the list
-    list.html("");
+    tbody.html("");
 
     var inputElement = d3.select("#datetime");
 
